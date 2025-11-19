@@ -1,0 +1,9 @@
+{
+    "pgm_name": "ZTEST_RULE628",
+    "inc_name": "ZTEST_RULE628_INC",
+    "type": "PROG",
+    "name": "MAIN_BLOCK",
+    "start_line": 10,
+    "end_line": 200,
+    "code": "SELECT SINGLE * FROM t881 INTO @DATA(ls_t881) WHERE rldnr = '01'.\nSELECT t881t~* FROM t881t INTO @DATA(ls_t881t) WHERE spras = sy-langu.\nOPEN CURSOR lv_cursor FOR SELECT * FROM t882g WHERE bukrs = '1000'.\nUPDATE t881 SET rldnr = '02' WHERE rldnr = '01'.\nDELETE FROM t881t WHERE spras = 'EN'.\nDATA(lv_dummy) = 'ABC'.\nWRITE: / 'Hello World'."
+}
